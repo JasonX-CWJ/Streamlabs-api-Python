@@ -1,6 +1,5 @@
 import sqlite3
 import requests
-import socketio
 import json
 from flask import Flask, redirect, request
 from dotenv import dotenv_values
@@ -8,7 +7,6 @@ from dotenv import dotenv_values
 # Constants
 STREAMLABS_API_BASE = "https://www.streamlabs.com/api/v1.0"
 socket_token = ""
-sio = socketio.Client()
 app = Flask(__name__)
 config = dotenv_values(".env")
 
